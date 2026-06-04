@@ -37,16 +37,24 @@ vim.schedule(function()
 end)
 
 -- ABRIR SIMPRE EN MOD INSERT
-vim.api.nvim_create_autocmd("BufReadPost", {
-  pattern = "*",
-  command = "startinsert"
-})
+--vim.api.nvim_create_autocmd("BufReadPost", {
+  --pattern = "*",
+  --command = "startinsert"
+--})
 
 -- CREAR Y ABRIR SIEMPRE EM MODO INSERT
-vim.api.nvim_create_autocmd("BufNewFile", {
-  pattern = "*",
-  command = "startinsert"
-})
+--vim.api.nvim_create_autocmd("BufNewFile", {
+  --pattern = "*",
+  --command = "startinsert"
+--})
+
+--Cambiar el cursor en modo NORMAL
+vim.opt.guicursor = {
+  "n:ver45",
+  "i:ver35",
+  "v:block",
+  "r:hor20"
+}
 
 -- Habilitar clipboard del sistema
 ---vim.opt.clipboard = "unnamedplus"
